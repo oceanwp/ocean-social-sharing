@@ -3,14 +3,14 @@
  * Plugin Name:			Ocean Social Sharing
  * Plugin URI:			https://oceanwp.org/extension/ocean-social-sharing/
  * Description:			A simple plugin to add social share buttons to your posts.
- * Version:				1.0.15
+ * Version:				1.1.1
  * Author:				OceanWP
  * Author URI:			https://oceanwp.org/
- * Requires at least:	4.5.0
- * Tested up to:		5.2
+ * Requires at least:	5.3
+ * Tested up to:		5.7
  *
  * Text Domain: ocean-social-sharing
- * Domain Path: /languages/
+ * Domain Path: /languages
  *
  * @package Ocean_Social_Sharing
  * @category Core
@@ -86,7 +86,7 @@ final class Ocean_Social_Sharing {
 		$this->token 			= 'ocean-social-sharing';
 		$this->plugin_url 		= plugin_dir_url( __FILE__ );
 		$this->plugin_path 		= plugin_dir_path( __FILE__ );
-		$this->version 			= '1.0.15';
+		$this->version 			= '1.1.1';
 
 		register_activation_hook( __FILE__, array( $this, 'install' ) );
 
@@ -120,7 +120,7 @@ final class Ocean_Social_Sharing {
 	 * @return  void
 	 */
 	public function oss_load_plugin_textdomain() {
-		load_plugin_textdomain( 'ocean-social-sharing', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 'ocean-social-sharing', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 	/**
@@ -528,7 +528,7 @@ final class Ocean_Social_Sharing {
 	 * @since   1.0.0
 	 */
 	public function head_css( $output ) {
-		
+
 		// Global vars
 		$sharing_border_radius 		= get_theme_mod( 'oss_social_share_style_border_radius' );
 		$sharing_borders 			= get_theme_mod( 'oss_sharing_borders_color' );

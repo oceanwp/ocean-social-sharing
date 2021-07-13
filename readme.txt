@@ -1,38 +1,46 @@
 === Ocean Social Sharing ===
-Contributors: oceanwp
+Contributors: oceanwp, apprimit, wpfleek
 Tags: social, social sharing, social share, share, oceanwp
-Requires at least: 4.5
-Tested up to: 5.2
-Stable tag: 1.0.15
+Requires at least: 5.3
+Tested up to: 5.7
+Requires PHP: 7.0
+Stable tag: 1.1.1
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+
+Website: https://oceanwp.org/
+Support: https://oceanwp.org/support/
+Documentation: https://docs.oceanwp.org/
+Extensions: https://oceanwp.org/extensions/
+Email: support@oceanwp.org
 
 == Description ==
 
-A simple plugin to add social share buttons to your posts.
+A simple plugin to add social sharing buttons to your single blog posts.
 This plugin requires the [OceanWP](https://oceanwp.org/) theme to be installed.
 
 = Key Features =
 
 * Add social networks: Twitter, Facebook, LinkedIn, Google+, Pinterest, Viber, VK, Reddit, Tumblr and Viadeo.
-* Alter the social sharing buttons
+* Alter social sharing buttons.
 * Choose between three styles.
-* Add the social names.
+* Add social names to your sharing buttons.
 * Choose the heading position.
 * Add or edit the social sharing via a child theme.
 
 == Installation ==
 
 1. Upload `ocean-social-sharing` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure it via the Social Sharing section of the customizer
+2. Activate the plugin through the 'Plugins > Installed Plugins' menu in WordPress dashboard
+3. Configure it via the Social Sharing section of the Customizer (Appearance > Customize)
 4. Done!
 
 == Frequently Asked Questions ==
 
 = I installed the plugin but it does not work =
 
-This plugin will only work with the [OceanWP](https://oceanwp.org/) theme.
+This plugin will only function with the [OceanWP](https://oceanwp.org/) theme.
 
 == Screenshots ==
 
@@ -47,6 +55,15 @@ This plugin will only work with the [OceanWP](https://oceanwp.org/) theme.
 9. Settings.
 
 == Changelog ==
+
+= 1.1.1 =
+- Added: Version updated for WordPress 5.7.
+
+= 1.1.0 =
+- Added: Improved Accessibility.
+- Added: Dutch translation.
+- Updated: Language translation strings.
+- Updated: readme.txt file.
 
 = 1.0.15 =
 - Added: Codes for the Freemius switch.

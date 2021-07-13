@@ -10,13 +10,11 @@
     .entry-share ul li:last-child {
       margin-right: 0; }
     .entry-share ul li a {
-      display: -webkit-inline-flex;
       display: -ms-inline-flex;
+      display: -ms-inline-flexbox;
       display: inline-flex;
-      -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
       position: relative;
@@ -29,10 +27,6 @@
         fill: #fff;
         width: 16px;
         height: 16px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
 
 .entry-share.side ul {
@@ -192,21 +186,14 @@
   margin: 6px 0; }
 
 .entry-share.has-name ul {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between; }
   .entry-share.has-name ul li {
     margin: 6px;
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1; }
     .entry-share.has-name ul li a {
@@ -219,21 +206,15 @@
   top: 0;
   bottom: 0;
   left: 0;
-  display: -webkit-inline-flex;
   display: -ms-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.08);
   padding: 0 12px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 .entry-share.has-name .oss-name {
