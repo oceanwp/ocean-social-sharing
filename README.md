@@ -2,10 +2,10 @@
 
 **Contributors:** Nick
 **Requires at least:** WordPress 5.3
-**Tested up to:** WordPress 5.7
-**Stable tag:** 1.1.1
+**Tested up to:** WordPress 5.8
+**Stable tag:** 2.0.0
 **License:** GPLv2 or later
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 

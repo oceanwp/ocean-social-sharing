@@ -7,7 +7,7 @@
  * Author:              OceanWP
  * Author URI:          https://oceanwp.org/
  * Requires at least:   5.3
- * Tested up to:        5.4
+ * Tested up to:        5.8
  *
  * Text Domain: ocean-social-sharing
  * Domain Path: /languages
