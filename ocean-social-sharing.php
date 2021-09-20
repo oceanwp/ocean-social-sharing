@@ -209,7 +209,7 @@ final class Ocean_Social_Sharing {
 	 * Register Customizer Tabs
 	 *
 	 * @param array $tabs Theme Customizer Tabs Array.
-	 * @since   2.0.0
+	 * @since 2.0.1
 	 */
 	public function register_customizer_tab( $tabs ) {
 		$tabs['ocean-extensions'] = __('Ocean Extensions', 'oceanwp');
@@ -220,7 +220,7 @@ final class Ocean_Social_Sharing {
 	 * Add Customizer Register hook
 	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-	 * @since   1.0.0
+	 * @since 2.0.1
 	 */
 	public function setup_customizer_register( $tab = 'all' ) {
 
