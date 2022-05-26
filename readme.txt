@@ -1,10 +1,10 @@
 === Ocean Social Sharing ===
 Contributors: oceanwp, apprimit, wpfleek
 Tags: social, social sharing, social share, share, oceanwp
-Requires at least: 5.3
-Tested up to: 5.9
+Requires at least: 5.6
+Tested up to: 6.0.0
 Requires PHP: 7.2
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,9 @@ This plugin will only function with the [OceanWP](https://oceanwp.org/) theme.
 9. Settings.
 
 == Changelog ==
+
+= 2.0.2 =
+- Improved: Theme Panel.
 
 = 2.0.1 =
 - Updated: WordPress version number for compatibility.

@@ -3,11 +3,11 @@
  * Plugin Name:         Ocean Social Sharing
  * Plugin URI:          https://oceanwp.org/extension/ocean-social-sharing/
  * Description:         A simple plugin to add social share buttons to your posts.
- * Version:             2.0.1
+ * Version:             2.0.2
  * Author:              OceanWP
  * Author URI:          https://oceanwp.org/
- * Requires at least:   5.3
- * Tested up to:        5.9
+ * Requires at least:   5.6
+ * Tested up to:        6.0.0
  *
  * Text Domain: ocean-social-sharing
  * Domain Path: /languages
@@ -94,7 +94,7 @@ final class Ocean_Social_Sharing
         $this->token       = 'ocean-social-sharing';
         $this->plugin_url  = plugin_dir_url(__FILE__);
         $this->plugin_path = plugin_dir_path(__FILE__);
-        $this->version     = '2.0.1';
+        $this->version     = '2.0.2';
 
         register_activation_hook(__FILE__, array( $this, 'install' ));
 
@@ -211,6 +211,7 @@ final class Ocean_Social_Sharing
             add_action('ocean_before_single_post_content', array( $this, 'before_content' ));
             add_action('ocean_social_share', array( $this, 'after_content' ));
             add_filter('ocean_head_css', array( $this, 'head_css' ));
+            add_filter( 'oe_theme_panels', array( $this, 'oe_theme_panels' ) );
         }
     }
 
@@ -222,6 +223,15 @@ final class Ocean_Social_Sharing
      */
     public function customizer_register( $wp_customize )
     {
+
+        if ( OCEAN_EXTRA_ACTIVE
+			&& class_exists( 'Ocean_Extra_Theme_Panel' ) ) {
+
+			if ( empty( Ocean_Extra_Theme_Panel::get_setting( 'ocean_social_sharing_panel' ) ) ) {
+				return false;
+			}
+
+		}
 
         /**
          * Add a new section
@@ -708,6 +718,21 @@ final class Ocean_Social_Sharing
         return $output;
 
     }
+
+    /**
+	 * Add social sharing switcher.
+	 *
+	 * @since  1.0.0
+	 */
+	public function oe_theme_panels( $panels ) {
+
+		$panels['ocean_social_sharing_panel'] = [
+			'label' => esc_html__('Social Sharing', 'ocean-social-sharing'),
+		];
+
+		// Return panels list
+		return $panels;
+	}
 
 } // End Class
 
