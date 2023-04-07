@@ -1,126 +1,133 @@
-# Copyright (C) 2016 
-# This file is distributed under the same license as the  package.
-#, fuzzy
+# Copyright (C) 2023 OceanWP
+# This file is distributed under the same license as the Ocean Social Sharing plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2020-03-17 22:17+0100\n"
+"Project-Id-Version: Ocean Social Sharing 2.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ocean-social-sharing\n"
+"Last-Translator: OceanWP <support@oceanwp.org>\n"
+"Language-Team: OceanWP <support@oceanwp.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
-"Last-Translator: OceanWP\n"
-"Language-Team: OceanWP\n"
-"X-Generator: Poedit 2.3\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: _esc_attr__;esc_attr_x;esc_attr_e;esc_html__;"
-"esc_html_e;esc_html_x;__;_e;__ngettext:1,2;_n:1,2;"
-"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;"
-"_nx:4c,1,2;_nx_noop:4c,1,2;esc_attr__\n"
-"X-Textdomain-Support: yes\n"
-"Language: en_US\n"
-"X-Poedit-SearchPath-0: .\n"
+"POT-Creation-Date: 2023-04-07T05:47:24+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: ocean-social-sharing\n"
 
-#: ocean-social-sharing.php:132 ocean-social-sharing.php:141
-msgid "Cheatin&#8217; huh?"
+#. Plugin Name of the plugin
+msgid "Ocean Social Sharing"
 msgstr ""
 
-#: ocean-social-sharing.php:207
+#. Plugin URI of the plugin
+msgid "https://oceanwp.org/extension/ocean-social-sharing/"
+msgstr ""
+
+#. Description of the plugin
+msgid "A simple plugin to add social share buttons to your posts."
+msgstr ""
+
+#. Author of the plugin
+msgid "OceanWP"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://oceanwp.org/"
+msgstr ""
+
+#: ocean-social-sharing.php:242
+#: ocean-social-sharing.php:730
 msgid "Social Sharing"
 msgstr ""
 
-#: ocean-social-sharing.php:232
+#: ocean-social-sharing.php:275
 msgid "Sharing Buttons"
 msgstr ""
 
-#: ocean-social-sharing.php:260
+#: ocean-social-sharing.php:312
 msgid "Position"
 msgstr ""
 
-#: ocean-social-sharing.php:266
+#: ocean-social-sharing.php:318
 msgid "Before the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:267
+#: ocean-social-sharing.php:319
 msgid "After the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:268
+#: ocean-social-sharing.php:320
 msgid "Before & After the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:269
+#: ocean-social-sharing.php:321
 msgid "No Buttons in the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:283
+#: ocean-social-sharing.php:344
 msgid "Add Social Name"
 msgstr ""
 
-#: ocean-social-sharing.php:294
+#: ocean-social-sharing.php:359
 msgid "Please Share This"
 msgstr ""
 
-#: ocean-social-sharing.php:300
+#: ocean-social-sharing.php:370
 msgid "Sharing Heading"
 msgstr ""
 
-#: ocean-social-sharing.php:317
+#: ocean-social-sharing.php:396
 msgid "Heading Position"
 msgstr ""
 
-#: ocean-social-sharing.php:323
+#: ocean-social-sharing.php:402
 msgid "Side"
 msgstr ""
 
-#: ocean-social-sharing.php:324
+#: ocean-social-sharing.php:403
 msgid "Top"
 msgstr ""
 
-#: ocean-social-sharing.php:337
+#: ocean-social-sharing.php:425
 msgid "Twitter Username"
 msgstr ""
 
-#: ocean-social-sharing.php:352
+#: ocean-social-sharing.php:449
 msgid "Styling"
 msgstr ""
 
-#: ocean-social-sharing.php:367
+#: ocean-social-sharing.php:473
 msgid "Style"
 msgstr ""
 
-#: ocean-social-sharing.php:373
+#: ocean-social-sharing.php:479
 msgid "Minimal"
 msgstr ""
 
-#: ocean-social-sharing.php:374
+#: ocean-social-sharing.php:480
 msgid "Colored"
 msgstr ""
 
-#: ocean-social-sharing.php:375
+#: ocean-social-sharing.php:481
 msgid "Dark"
 msgstr ""
 
-#: ocean-social-sharing.php:388
+#: ocean-social-sharing.php:503
 msgid "Border Radius"
 msgstr ""
 
-#: ocean-social-sharing.php:389
+#: ocean-social-sharing.php:504
 msgid "Add a custom border radius. px - em - %."
 msgstr ""
 
-#: ocean-social-sharing.php:405
+#: ocean-social-sharing.php:529
 msgid "Minimal Style: Borders Color"
 msgstr ""
 
-#: ocean-social-sharing.php:420
+#: ocean-social-sharing.php:553
 msgid "Minimal Style: Background Color"
 msgstr ""
 
-#: ocean-social-sharing.php:435
+#: ocean-social-sharing.php:577
 msgid "Minimal Style: Color"
 msgstr ""
 
@@ -136,11 +143,16 @@ msgstr ""
 msgid "Share on Twitter"
 msgstr ""
 
-#: template/social-share.php:101 template/social-share.php:124
-#: template/social-share.php:148 template/social-share.php:175
-#: template/social-share.php:205 template/social-share.php:231
-#: template/social-share.php:275 template/social-share.php:298
-#: template/social-share.php:334 template/social-share.php:362
+#: template/social-share.php:101
+#: template/social-share.php:124
+#: template/social-share.php:148
+#: template/social-share.php:175
+#: template/social-share.php:205
+#: template/social-share.php:231
+#: template/social-share.php:275
+#: template/social-share.php:298
+#: template/social-share.php:334
+#: template/social-share.php:362
 #: template/social-share.php:396
 msgid "Opens in a new window"
 msgstr ""
