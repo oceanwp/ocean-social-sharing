@@ -2,7 +2,7 @@
 Contributors: oceanwp, apprimit, wpfleek
 Tags: social, social sharing, social share, share, oceanwp
 Requires at least: 5.6
-Tested up to: 6.2
+Tested up to: 6.2.1
 Requires PHP: 7.2
 Stable tag: 2.0.4
 License: GPLv2 or later
@@ -56,8 +56,8 @@ This plugin will only function with the [OceanWP](https://oceanwp.org/) theme.
 
 == Changelog ==
 
-= 2.0.4 - MAY 17 2023 =
-- Compatibility: PHP 8.2: Creation of dynamic property Ocean_Social_Sharing::$plugin_path and Ocean_Social_Sharing::$plugin_url is deprecated.
+= 2.0.4 - MAY 22 2023 =
+- Added: Compatibility: PHP 8.2.6: Creation of dynamic property Ocean_Social_Sharing::$plugin_path and Ocean_Social_Sharing::$plugin_url is deprecated.
 
 = 2.0.3 - MAR 29 2023 =
 - Updated: Version numbers for compatibility.
