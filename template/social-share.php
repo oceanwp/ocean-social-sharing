@@ -97,7 +97,7 @@ $classes = implode( ' ', $classes ); ?>
 				$handle = str_replace( '@' , '' , trim( $handle ) ); ?>
 
 				<li class="twitter">
-					<a href="https://twitter.com/share?text=<?php echo wp_strip_all_tags( rawurlencode( $title ) ); ?>&amp;url=<?php echo rawurlencode( esc_url( $url ) ); ?><?php if ( $handle ) echo '&amp;via='. esc_attr( $handle ); ?>" aria-label="<?php esc_attr_e( 'Share on Twitter', 'ocean-social-sharing' ); ?>" onclick="oss_onClick( this.href );return false;">
+					<a href="https://twitter.com/share?text=<?php echo wp_strip_all_tags( rawurlencode( $title ) ); ?>&amp;url=<?php echo rawurlencode( esc_url( $url ) ); ?><?php if ( $handle ) echo '&amp;via='. esc_attr( $handle ); ?>" aria-label="<?php esc_attr_e( 'Share on X', 'ocean-social-sharing' ); ?>" onclick="oss_onClick( this.href );return false;">
 						<span class="screen-reader-text"><?php echo esc_attr__( 'Opens in a new window', 'ocean-social-sharing' ); ?></span>
 						<span class="oss-icon-wrap">
 							<svg class="oss-icon" role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -108,7 +108,7 @@ $classes = implode( ' ', $classes ); ?>
 						// If name
 						if ( true == $name
 							|| is_customize_preview() ) { ?>
-							<span class="oss-name" aria-hidden="true"><?php esc_html_e( 'Twitter', 'ocean-social-sharing' ); ?></span>
+							<span class="oss-name" aria-hidden="true"><?php esc_html_e( 'X', 'ocean-social-sharing' ); ?></span>
 						<?php
 						} ?>
 					</a>
