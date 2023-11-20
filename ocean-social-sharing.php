@@ -3,11 +3,11 @@
  * Plugin Name:         Ocean Social Sharing
  * Plugin URI:          https://oceanwp.org/extension/ocean-social-sharing/
  * Description:         A simple plugin to add social share buttons to your posts.
- * Version:             2.0.5
+ * Version:             2.0.6
  * Author:              OceanWP
  * Author URI:          https://oceanwp.org/
  * Requires at least:   5.6
- * Tested up to:        6.3.1
+ * Tested up to:        6.4.1
  *
  * Text Domain: ocean-social-sharing
  * Domain Path: /languages
@@ -88,6 +88,14 @@ final class Ocean_Social_Sharing
 	 */
 	public $plugin_path;
 
+	/**
+	 * The plugin data.
+	 *
+	 * @var     array
+	 * @access  public
+	 */
+	public $plugin_data;
+
 	// Admin - Start
 	/**
 	 * The admin object.
@@ -110,7 +118,8 @@ final class Ocean_Social_Sharing
 		$this->token       = 'ocean-social-sharing';
 		$this->plugin_url  = plugin_dir_url(__FILE__);
 		$this->plugin_path = plugin_dir_path(__FILE__);
-		$this->version     = '2.0.5';
+		$this->plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ), false );
+		$this->version     = $this->plugin_data['Version'];
 
 		register_activation_hook(__FILE__, array( $this, 'install' ));
 
@@ -288,22 +297,22 @@ final class Ocean_Social_Sharing
 				$wp_customize,
 				'oss_social_share_sites',
 				array(
-				'label'    => esc_html__('Sharing Buttons', 'ocean-social-sharing'),
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_social_share_sites',
-				'priority' => 10,
-				'choices'  => array(
-				'twitter'     => 'Twitter',
-				'facebook'    => 'Facebook',
-				'google_plus' => 'Google Plus',
-				'pinterest'   => 'Pinterest',
-				'linkedin'    => 'LinkedIn',
-				'viber'       => 'Viber',
-				'vk'          => 'VK',
-				'reddit'      => 'Reddit',
-				'tumblr'      => 'Tumblr',
-				'viadeo'      => 'Viadeo',
-				'whatsapp'    => 'WhatsApp',
+					'label'    => esc_html__('Sharing Buttons', 'ocean-social-sharing'),
+					'section'  => 'oss_sharing_section',
+					'settings' => 'oss_social_share_sites',
+					'priority' => 10,
+					'choices'  => array(
+						'twitter'     => 'Twitter',
+						'facebook'    => 'Facebook',
+						'google_plus' => 'Google Plus',
+						'pinterest'   => 'Pinterest',
+						'linkedin'    => 'LinkedIn',
+						'viber'       => 'Viber',
+						'vk'          => 'VK',
+						'reddit'      => 'Reddit',
+						'tumblr'      => 'Tumblr',
+						'viadeo'      => 'Viadeo',
+						'whatsapp'    => 'WhatsApp',
 					),
 				)
 			)
