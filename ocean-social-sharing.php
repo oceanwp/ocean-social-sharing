@@ -278,7 +278,6 @@ final class Ocean_Social_Sharing
 			'default'           => array(
 			'twitter',
 			'facebook',
-			'google_plus',
 			'pinterest',
 			'linkedin',
 			'viber',
@@ -304,7 +303,6 @@ final class Ocean_Social_Sharing
 					'choices'  => array(
 						'twitter'     => 'Twitter',
 						'facebook'    => 'Facebook',
-						'google_plus' => 'Google Plus',
 						'pinterest'   => 'Pinterest',
 						'linkedin'    => 'LinkedIn',
 						'viber'       => 'Viber',
