@@ -2,7 +2,7 @@
 Contributors: oceanwp, apprimit, wpfleek
 Tags: social, social sharing, social share, share, oceanwp
 Requires at least: 5.6
-Tested up to: 6.4.1
+Tested up to: 6.4.2
 Requires PHP: 7.2
 Stable tag: 2.0.6
 License: GPLv2 or later
