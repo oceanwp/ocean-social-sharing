@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 2.0.6 - DEC 11 2023 =
+- Updated: Font Awesome Library to 6.5.1 version.
+- Deprecated: Google+ social sharing option.
+
 = 2.0.5 - SEP 6 2023 =
 - Updated: Compatibility: WordPress version number.
 

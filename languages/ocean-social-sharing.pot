@@ -2,16 +2,16 @@
 # This file is distributed under the same license as the Ocean Social Sharing plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ocean Social Sharing 2.0.5\n"
+"Project-Id-Version: Ocean Social Sharing 2.0.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ocean-social-sharing\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-09-06T05:18:05+00:00\n"
+"POT-Creation-Date: 2023-12-11T03:50:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.9.0\n"
 "X-Domain: ocean-social-sharing\n"
 
 #. Plugin Name of the plugin
@@ -34,100 +34,100 @@ msgstr ""
 msgid "https://oceanwp.org/"
 msgstr ""
 
-#: ocean-social-sharing.php:258
-#: ocean-social-sharing.php:746
+#: ocean-social-sharing.php:267
+#: ocean-social-sharing.php:753
 msgid "Social Sharing"
 msgstr ""
 
-#: ocean-social-sharing.php:291
+#: ocean-social-sharing.php:299
 msgid "Sharing Buttons"
 msgstr ""
 
-#: ocean-social-sharing.php:328
+#: ocean-social-sharing.php:335
 msgid "Position"
 msgstr ""
 
-#: ocean-social-sharing.php:334
+#: ocean-social-sharing.php:341
 msgid "Before the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:335
+#: ocean-social-sharing.php:342
 msgid "After the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:336
+#: ocean-social-sharing.php:343
 msgid "Before & After the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:337
+#: ocean-social-sharing.php:344
 msgid "No Buttons in the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:360
+#: ocean-social-sharing.php:367
 msgid "Add Social Name"
 msgstr ""
 
-#: ocean-social-sharing.php:375
+#: ocean-social-sharing.php:382
 msgid "Please Share This"
 msgstr ""
 
-#: ocean-social-sharing.php:386
+#: ocean-social-sharing.php:393
 msgid "Sharing Heading"
 msgstr ""
 
-#: ocean-social-sharing.php:412
+#: ocean-social-sharing.php:419
 msgid "Heading Position"
 msgstr ""
 
-#: ocean-social-sharing.php:418
+#: ocean-social-sharing.php:425
 msgid "Side"
 msgstr ""
 
-#: ocean-social-sharing.php:419
+#: ocean-social-sharing.php:426
 msgid "Top"
 msgstr ""
 
-#: ocean-social-sharing.php:441
+#: ocean-social-sharing.php:448
 msgid "Twitter Username"
 msgstr ""
 
-#: ocean-social-sharing.php:465
+#: ocean-social-sharing.php:472
 msgid "Styling"
 msgstr ""
 
-#: ocean-social-sharing.php:489
+#: ocean-social-sharing.php:496
 msgid "Style"
 msgstr ""
 
-#: ocean-social-sharing.php:495
+#: ocean-social-sharing.php:502
 msgid "Minimal"
 msgstr ""
 
-#: ocean-social-sharing.php:496
+#: ocean-social-sharing.php:503
 msgid "Colored"
 msgstr ""
 
-#: ocean-social-sharing.php:497
+#: ocean-social-sharing.php:504
 msgid "Dark"
 msgstr ""
 
-#: ocean-social-sharing.php:519
+#: ocean-social-sharing.php:526
 msgid "Border Radius"
 msgstr ""
 
-#: ocean-social-sharing.php:520
+#: ocean-social-sharing.php:527
 msgid "Add a custom border radius. px - em - %."
 msgstr ""
 
-#: ocean-social-sharing.php:545
+#: ocean-social-sharing.php:552
 msgid "Minimal Style: Borders Color"
 msgstr ""
 
-#: ocean-social-sharing.php:569
+#: ocean-social-sharing.php:576
 msgid "Minimal Style: Background Color"
 msgstr ""
 
-#: ocean-social-sharing.php:593
+#: ocean-social-sharing.php:600
 msgid "Minimal Style: Color"
 msgstr ""
 
@@ -140,103 +140,94 @@ msgid "Available sharing options"
 msgstr ""
 
 #: template/social-share.php:100
-msgid "Share on Twitter"
+msgid "Share on X"
 msgstr ""
 
 #: template/social-share.php:101
 #: template/social-share.php:124
-#: template/social-share.php:148
-#: template/social-share.php:175
-#: template/social-share.php:205
-#: template/social-share.php:231
-#: template/social-share.php:275
-#: template/social-share.php:298
-#: template/social-share.php:334
-#: template/social-share.php:362
-#: template/social-share.php:396
+#: template/social-share.php:149
+#: template/social-share.php:177
+#: template/social-share.php:202
+#: template/social-share.php:234
+#: template/social-share.php:263
+#: template/social-share.php:292
+#: template/social-share.php:317
+#: template/social-share.php:345
 msgid "Opens in a new window"
 msgstr ""
 
 #: template/social-share.php:111
-msgid "Twitter"
+msgid "X"
 msgstr ""
 
 #: template/social-share.php:123
 msgid "Share on Facebook"
 msgstr ""
 
-#: template/social-share.php:135
+#: template/social-share.php:136
 msgid "Facebook"
 msgstr ""
 
-#: template/social-share.php:147
-msgid "Share on Google plus"
-msgstr ""
-
-#: template/social-share.php:162
-msgid "Google+"
-msgstr ""
-
-#: template/social-share.php:174
+#: template/social-share.php:148
 msgid "Share on Pinterest"
 msgstr ""
 
-#: template/social-share.php:192
+#: template/social-share.php:164
 msgid "Pinterest"
 msgstr ""
 
-#: template/social-share.php:204
+#: template/social-share.php:176
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: template/social-share.php:218
+#: template/social-share.php:189
 msgid "LinkedIn"
 msgstr ""
 
-#: template/social-share.php:230
+#: template/social-share.php:201
 msgid "Share on Viber"
 msgstr ""
 
-#: template/social-share.php:262
+#: template/social-share.php:221
 msgid "Viber"
 msgstr ""
 
-#: template/social-share.php:274
+#: template/social-share.php:233
 msgid "Share on VK"
 msgstr ""
 
-#: template/social-share.php:285
+#: template/social-share.php:250
 msgid "VK"
 msgstr ""
 
-#: template/social-share.php:297
+#: template/social-share.php:262
 msgid "Share on Reddit"
 msgstr ""
 
-#: template/social-share.php:321
+#: template/social-share.php:279
 msgid "Reddit"
 msgstr ""
 
-#: template/social-share.php:333
+#: template/social-share.php:291
 msgid "Share on Tumblr"
 msgstr ""
 
-#: template/social-share.php:349
+#: template/social-share.php:304
 msgid "Tumblr"
 msgstr ""
 
-#: template/social-share.php:361
+#: template/social-share.php:316
 msgid "Share on Viadeo"
 msgstr ""
 
-#: template/social-share.php:383
+#: template/social-share.php:332
 msgid "Viadeo"
 msgstr ""
 
-#: template/social-share.php:395
+#: template/social-share.php:344
 msgid "Share on WhatsApp"
 msgstr ""
 
-#: template/social-share.php:416
+#: template/social-share.php:361
 msgid "WhatsApp"
 msgstr ""

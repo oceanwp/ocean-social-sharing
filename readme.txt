@@ -2,9 +2,9 @@
 Contributors: oceanwp, apprimit, wpfleek
 Tags: social, social sharing, social share, share, oceanwp
 Requires at least: 5.6
-Tested up to: 6.3.1
+Tested up to: 6.4.2
 Requires PHP: 7.2
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,14 @@ Support: https://oceanwp.org/support/
 Documentation: https://docs.oceanwp.org/
 Extensions: https://oceanwp.org/extensions/
 Email: support@oceanwp.org
+
+== Copyright ==
+
+Ocean Social Sharing uses the following third-party resources:
+
+Font Awesome Icons, Copyright Dave Gandy
+License: CC BY 4.0 License - https://creativecommons.org/licenses/by/4.0/
+Source: https://fontawesome.com/
 
 == Description ==
 
@@ -55,6 +63,10 @@ This plugin will only function with the [OceanWP](https://oceanwp.org/) theme.
 9. Settings.
 
 == Changelog ==
+
+= 2.0.6 - DEC 11 2023 =
+- Updated: Font Awesome Library to 6.5.1 version.
+- Deprecated: Google+ social sharing option.
 
 = 2.0.5 - SEP 6 2023 =
 - Updated: Compatibility: WordPress version number.
