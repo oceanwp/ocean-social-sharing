@@ -210,7 +210,7 @@ $options = [
 				],
 				'preview' => 'queryWithType',
 				'css' => [
-					'.entry-share ul li a' => 'border-radius'
+					'.entry-share ul li a' => ['border-radius']
 				]
 			],
 
