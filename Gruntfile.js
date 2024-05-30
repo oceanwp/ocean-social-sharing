@@ -6,11 +6,34 @@ module.exports = function ( grunt ) {
 	require( 'time-grunt' )( grunt );
 
 	// Load all Grunt tasks
-	require( 'jit-grunt' )( grunt, {} );
+	require( 'jit-grunt' )( grunt, {
+		browserify: "grunt-browserify",
+	} );
 
 	grunt.initConfig( {
 
 		pkg: grunt.file.readJSON( 'package.json' ),
+
+		browserify: {
+			prod: {
+				files: {
+					'assets/js/social.min.js': 'assets/js/social.js',
+					'assets/js/customizer.min.js': 'assets/js/customizer.js'
+				},
+				options: {
+					transform: [["babelify", { presets: ["@babel/preset-env"] }]],
+				},
+			},
+			dev: {
+				files: {
+					'assets/js/social.min.js': 'assets/js/social.min.js',
+					'assets/js/customizer.min.js': 'assets/js/customizer.min.js'
+				},
+				options: {
+					transform: [["babelify", { presets: ["@babel/preset-env"] }]],
+				},
+			},
+		},
 
 		// Concat and Minify our js.
 		uglify: {
@@ -151,15 +174,17 @@ module.exports = function ( grunt ) {
 
 	// Dev task
 	grunt.registerTask( 'default', [
-		'sass:dev'
+		"browserify:dev",
+		"browserify:prod",
+		"uglify:prod",
+		"sass:dev",
+		"sass:prod",
+		"autoprefixer:main",
+		'csscomb:main'
 	] );
 
 	// Production task
 	grunt.registerTask( 'build', [
-		'newer:uglify:prod',
-		'sass:prod',
-		'autoprefixer:main',
-		'csscomb:main',
 		'copy'
 	] );
 

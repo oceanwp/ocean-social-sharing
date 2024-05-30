@@ -16,7 +16,7 @@ $options = [
 		'options' => [
 			'oss_top_quick_links' => [
 				'type' => 'ocean-links',
-				'label' => 'Quick Menu',
+				'label' => esc_html__( 'Quick Menu', 'ocean-social-sharing' ),
 				'section' => 'ocean_social_sharing_settings',
 				'transport' => 'postMessage',
 				'priority' => 10,
@@ -194,14 +194,14 @@ $options = [
 				'setting_args' => [
 					'desktop' => [
 						'id' => 'oss_social_share_style_border_radius',
-						'label' => 'Desktop',
+						'label' => esc_html__( 'Desktop', 'ocean-social-sharing' ),
 						'attr' => [
 							'transport' => 'postMessage',
 						],
 					],
 					'unit' => [
 						'id' => 'oss_social_share_style_border_radius_unit',
-						'label' => 'Unit',
+						'label' => esc_html__( 'Unit', 'ocean-social-sharing' ),
 						'attr' => [
 							'transport' => 'postMessage',
 							'default' => 'px',
