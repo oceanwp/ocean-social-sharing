@@ -57,7 +57,6 @@ $options = [
 				'priority' => 10,
 				'default'  => ['twitter', 'facebook', 'pinterest', 'linkedin', 'viber', 'vk', 'reddit', 'tumblr', 'viadeo', 'whatsapp'],
 				'hideLabel' => false,
-				'sanitize_callback' => 'oceanwp_sanitize_multi_choices',
 				'choices' => [
 					'twitter'     => 'Twitter',
 					'facebook'    => 'Facebook',
@@ -94,7 +93,7 @@ $options = [
 				'choices' => [
 					'before' => esc_html__('Before the Content', 'ocean-social-sharing'),
 					'after'  => esc_html__('After the Content', 'ocean-social-sharing'),
-					'both'   => esc_html__('Before & After the Content', 'ocean-social-sharing'),
+					'both'   => esc_html__('Before and After the Content', 'ocean-social-sharing'),
 					'none'   => esc_html__('No Buttons in the Content', 'ocean-social-sharing'),
 				]
 			],

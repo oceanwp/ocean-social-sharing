@@ -3,7 +3,7 @@
  * Plugin Name:         Ocean Social Sharing
  * Plugin URI:          https://oceanwp.org/extension/ocean-social-sharing/
  * Description:         A simple plugin to add social share buttons to your posts.
- * Version:             2.0.7
+ * Version:             2.0.6
  * Author:              OceanWP
  * Author URI:          https://oceanwp.org/
  * Requires at least:   5.6
@@ -121,6 +121,8 @@ final class Ocean_Social_Sharing
 		$this->plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ), false );
 		$this->version     = $this->plugin_data['Version'];
 
+		define( 'OSS_VERSION', $this->version );
+
 		register_activation_hook(__FILE__, array( $this, 'install' ));
 
 		add_action('init', array( $this, 'oss_load_plugin_textdomain' ));
@@ -232,11 +234,18 @@ final class Ocean_Social_Sharing
 			include_once $this->plugin_path . '/includes/helpers.php';
 			add_action('customize_register', array( $this, 'customizer_register' ));
 			add_action('customize_preview_init', array( $this, 'customize_preview_js' ));
+			add_filter( 'ocean_customize_options_data', array( $this, 'local_customize_options') );
 			add_action('wp_enqueue_scripts', array( $this, 'get_scripts' ), 999);
 			add_action('ocean_before_single_post_content', array( $this, 'before_content' ));
 			add_action('ocean_social_share', array( $this, 'after_content' ));
 			add_filter('ocean_head_css', array( $this, 'head_css' ));
 			add_filter( 'oe_theme_panels', array( $this, 'oe_theme_panels' ) );
+
+			$theme_version = $theme['version'];
+
+			// if ( $theme_version <= '3.6.0' && ! class_exists( 'Ocean_Extra' ) ) {
+			// 	include_once $this->plugin_path . '/includes/update-message.php';
+			// }
 		}
 	}
 
@@ -276,6 +285,18 @@ final class Ocean_Social_Sharing
 			OceanWP_Customizer_Init::register_options_recursive($wp_customize, $section_key, $section_options['options'] );
 		}
 
+	}
+
+	/**
+	 * Added localize in customizer js
+	 */
+	public function local_customize_options($options) {
+		$path = $this->plugin_path . 'includes/';
+		$optiondata = ocean_customize_options('options', false, $path);
+
+		$options['ocean-social-sharing'] = $optiondata;
+
+		return $options;
 	}
 
 	/**
