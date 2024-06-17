@@ -9,8 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$options = [
-	'ocean_social_sharing_settings' => [
+/**
+ * Customizer Options
+ */
+function oss_customizer_options() {
+
+	$options = [
 		'title' => __( 'Social Sharing', 'ocean-social-sharing' ),
 		'priority' => 13,
 		'options' => [
@@ -304,5 +308,8 @@ $options = [
 				]
 			],
 		]
-	]
-];
+	];
+
+	return apply_filters( 'oss_customizer_options', $options );
+
+}
