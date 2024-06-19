@@ -258,7 +258,7 @@ final class Ocean_Social_Sharing
 			&& class_exists( 'Ocean_Extra_Theme_Panel' ) ) {
 
 			if ( empty( Ocean_Extra_Theme_Panel::get_setting( 'ocean_social_sharing_panel' ) ) ) {
-				return false;
+				return $options;
 			}
 
 		}
