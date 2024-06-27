@@ -98,7 +98,7 @@ function oss_customizer_options() {
 					'before' => esc_html__('Before the Content', 'ocean-social-sharing'),
 					'after'  => esc_html__('After the Content', 'ocean-social-sharing'),
 					'both'   => esc_html__('Before and After the Content', 'ocean-social-sharing'),
-					'none'   => esc_html__('No Buttons in the Content', 'ocean-social-sharing'),
+					'none'   => esc_html__('Disabled', 'ocean-social-sharing'),
 				]
 			],
 
