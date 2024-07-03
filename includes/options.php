@@ -16,43 +16,8 @@ function oss_customizer_options() {
 
 	$options = [
 		'title' => __( 'Social Sharing', 'ocean-social-sharing' ),
-		'priority' => 13,
+		'priority' => 6,
 		'options' => [
-			'oss_top_quick_links' => [
-				'type' => 'ocean-links',
-				'label' => esc_html__( 'Quick Menu', 'ocean-social-sharing' ),
-				'section' => 'ocean_social_sharing_settings',
-				'transport' => 'postMessage',
-				'priority' => 10,
-				'class' => 'top-quick-links',
-				'linkIcon' => 'link-2',
-				'titleIcon' => 'three-dot-menu',
-				'active_callback' => 'ocean_is_oe_active',
-				'links' => [
-					'website_layout' => [
-						'label' => esc_html__('Website Layout', 'ocean-social-sharing'),
-						'url' => '#'
-					],
-					'scroll_top' => [
-						'label' => esc_html__('Scroll To Top', 'ocean-social-sharing'),
-						'url' => '#'
-					],
-					'pagination' => [
-						'label' => esc_html__('Pagination', 'ocean-social-sharing'),
-						'url' => '#'
-					]
-				]
-			],
-
-			'oss_divider_after_top_quick_links' => [
-				'type' => 'ocean-divider',
-				'section' => 'ocean_social_sharing_settings',
-				'transport' => 'postMessage',
-				'priority' => 10,
-				'top' => 10,
-				'bottom' => 10
-			],
-
 			'oss_social_share_sites' => [
 				'label' => esc_html__( 'Sharing Buttons', 'ocean-social-sharing' ),
 				'type' => 'ocean-sortable',
@@ -84,6 +49,37 @@ function oss_customizer_options() {
 				'bottom' => 1
 			],
 
+			'oss_social_share_name' => [
+				'type' => 'ocean-switch',
+				'label' => esc_html__('Display Social Name', 'ocean-social-sharing'),
+				'section' => 'ocean_social_sharing_settings',
+				'default'  => false,
+				'transport' => 'postMessage',
+				'priority' => 10,
+				'hideLabel' => false,
+				'sanitize_callback' => 'oceanwp_sanitize_checkbox',
+			],
+
+			'oss_divider_after_social_share_name' => [
+				'type' => 'ocean-divider',
+				'section' => 'ocean_social_sharing_settings',
+				'transport' => 'postMessage',
+				'priority' => 10,
+				'top' => 10,
+				'bottom' => 10
+			],
+
+			'oss_social_share_twitter_handle' => [
+				'label'    => esc_html__( 'Twitter Username', 'ocean-social-sharing' ),
+				'type'     => 'ocean-text',
+				'section'  => 'ocean_social_sharing_settings',
+				'transport' => 'postMessage',
+				'default'   => '',
+				'priority' => 10,
+				'hideLabel' => false,
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+			],
+
 			'oss_social_share_position' => [
 				'type' => 'ocean-select',
 				'label' => esc_html__('Position', 'ocean-social-sharing' ),
@@ -102,15 +98,13 @@ function oss_customizer_options() {
 				]
 			],
 
-			'oss_social_share_name' => [
-				'type' => 'ocean-switch',
-				'label' => esc_html__('Add Social Name', 'ocean-social-sharing'),
+			'oss_divider_after_social_share_position' => [
+				'type' => 'ocean-divider',
 				'section' => 'ocean_social_sharing_settings',
-				'default'  => false,
 				'transport' => 'postMessage',
 				'priority' => 10,
-				'hideLabel' => false,
-				'sanitize_callback' => 'oceanwp_sanitize_checkbox',
+				'top' => 10,
+				'bottom' => 10
 			],
 
 			'oss_social_share_heading' => [
@@ -149,20 +143,18 @@ function oss_customizer_options() {
 				]
 			],
 
-			'oss_social_share_twitter_handle' => [
-				'label'    => esc_html__( 'Twitter Username', 'ocean-social-sharing' ),
-				'type'     => 'ocean-text',
-				'section'  => 'ocean_social_sharing_settings',
+			'oss_divider_after_social_share_heading_position' => [
+				'type' => 'ocean-divider',
+				'section' => 'ocean_social_sharing_settings',
 				'transport' => 'postMessage',
-				'default'   => '',
 				'priority' => 10,
-				'hideLabel' => false,
-				'sanitize_callback' => 'wp_filter_nohtml_kses'
+				'top' => 10,
+				'bottom' => 10
 			],
 
 			'oss_social_share_style' => [
 				'type' => 'ocean-select',
-				'label' => esc_html__('Style', 'ocean-social-sharing' ),
+				'label' => esc_html__('Social Buttons Style', 'ocean-social-sharing' ),
 				'section' => 'ocean_social_sharing_settings',
 				'transport' => 'postMessage',
 				'default' => 'minimal',
@@ -307,6 +299,22 @@ function oss_customizer_options() {
 					]
 				]
 			],
+
+			'oss_sharing_divider_for_need_help_link' => [
+				'type' => 'ocean-divider',
+				'section' => 'ocean_social_sharing_settings',
+				'transport' => 'postMessage',
+				'priority' => 10,
+			],
+
+			'oss_sharing_need_help_link' => [
+				'type' => 'ocean-content',
+				'isContent' => sprintf( esc_html__( '%1$s Need Help? %2$s', 'oceanwp' ), '<a href="http://docs.oceanwp.org/category/369-shortcodes" target="_blank">', '</a>' ),
+				'class' => 'need-help',
+				'section' => 'ocean_social_sharing_settings',
+				'transport' => 'postMessage',
+				'priority' => 10,
+			]
 		]
 	];
 
