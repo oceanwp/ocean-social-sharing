@@ -49,37 +49,6 @@ function oss_customizer_options() {
 				'bottom' => 1
 			],
 
-			'oss_social_share_name' => [
-				'type' => 'ocean-switch',
-				'label' => esc_html__('Display Social Name', 'ocean-social-sharing'),
-				'section' => 'ocean_social_sharing_settings',
-				'default'  => false,
-				'transport' => 'postMessage',
-				'priority' => 10,
-				'hideLabel' => false,
-				'sanitize_callback' => 'oceanwp_sanitize_checkbox',
-			],
-
-			'oss_divider_after_social_share_name' => [
-				'type' => 'ocean-divider',
-				'section' => 'ocean_social_sharing_settings',
-				'transport' => 'postMessage',
-				'priority' => 10,
-				'top' => 10,
-				'bottom' => 10
-			],
-
-			'oss_social_share_twitter_handle' => [
-				'label'    => esc_html__( 'Twitter Username', 'ocean-social-sharing' ),
-				'type'     => 'ocean-text',
-				'section'  => 'ocean_social_sharing_settings',
-				'transport' => 'postMessage',
-				'default'   => '',
-				'priority' => 10,
-				'hideLabel' => false,
-				'sanitize_callback' => 'wp_filter_nohtml_kses'
-			],
-
 			'oss_social_share_position' => [
 				'type' => 'ocean-select',
 				'label' => esc_html__('Position', 'ocean-social-sharing' ),
@@ -99,6 +68,46 @@ function oss_customizer_options() {
 			],
 
 			'oss_divider_after_social_share_position' => [
+				'type' => 'ocean-divider',
+				'section' => 'ocean_social_sharing_settings',
+				'transport' => 'postMessage',
+				'priority' => 10,
+				'top' => 1,
+				'bottom' => 1
+			],
+
+			'oss_social_share_name' => [
+				'type' => 'ocean-switch',
+				'label' => esc_html__('Display Social Name', 'ocean-social-sharing'),
+				'section' => 'ocean_social_sharing_settings',
+				'default'  => false,
+				'transport' => 'postMessage',
+				'priority' => 10,
+				'hideLabel' => false,
+				'sanitize_callback' => 'oceanwp_sanitize_checkbox',
+			],
+
+			'oss_divider_after_social_share_name' => [
+				'type' => 'ocean-divider',
+				'section' => 'ocean_social_sharing_settings',
+				'transport' => 'postMessage',
+				'priority' => 10,
+				'top' => 1,
+				'bottom' => 10
+			],
+
+			'oss_social_share_twitter_handle' => [
+				'label'    => esc_html__( 'Twitter Username', 'ocean-social-sharing' ),
+				'type'     => 'ocean-text',
+				'section'  => 'ocean_social_sharing_settings',
+				'transport' => 'postMessage',
+				'default'   => '',
+				'priority' => 10,
+				'hideLabel' => false,
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+			],
+
+			'oss_divider_after_social_share_twitter_handle' => [
 				'type' => 'ocean-divider',
 				'section' => 'ocean_social_sharing_settings',
 				'transport' => 'postMessage',
@@ -298,13 +307,6 @@ function oss_customizer_options() {
 						],
 					]
 				]
-			],
-
-			'oss_sharing_divider_for_need_help_link' => [
-				'type' => 'ocean-divider',
-				'section' => 'ocean_social_sharing_settings',
-				'transport' => 'postMessage',
-				'priority' => 10,
 			],
 
 			'oss_sharing_need_help_link' => [
