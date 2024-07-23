@@ -16,7 +16,7 @@ function oss_customizer_options() {
 
 	$options = [
 		'title' => __( 'Social Sharing', 'ocean-social-sharing' ),
-		'priority' => 6,
+		'priority' => 15,
 		'options' => [
 			'oss_social_share_sites' => [
 				'label' => esc_html__( 'Sharing Buttons', 'ocean-social-sharing' ),
