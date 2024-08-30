@@ -189,7 +189,7 @@ function oss_customizer_options() {
 
 			'oss_social_share_style_border_radius' => [
 				'id'                => 'oss_social_share_style_border_radius',
-				'label'             => esc_html__( 'Border Radius', 'ocean-social-sharing' ),
+				'label'             => esc_html__( 'Buttons Border Radius', 'ocean-social-sharing' ),
 				'type'              => 'ocean-range-slider',
 				'section'           => 'ocean_social_sharing_settings',
 				'transport'         => 'postMessage',
@@ -285,7 +285,7 @@ function oss_customizer_options() {
 
 			'oss_sharing_icons_color' => [
 				'type'              => 'ocean-color',
-				'label'             => esc_html__( 'Minimal Style Color', 'ocean-social-sharing' ),
+				'label'             => esc_html__( 'Minimal Style Icon', 'ocean-social-sharing' ),
 				'section'           => 'ocean_social_sharing_settings',
 				'transport'         => 'postMessage',
 				'priority'          => 10,
