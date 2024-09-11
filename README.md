@@ -2,7 +2,7 @@
 
 **Contributors:** Nick
 **Requires at least:** WordPress 5.6
-**Tested up to:** WordPress 6.5.3
+**Tested up to:** WordPress 6.5.2
 **Stable tag:** 2.0.7
 **License:** GPLv2 or later
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
