@@ -2,133 +2,146 @@
 # This file is distributed under the same license as the Ocean Social Sharing plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ocean Social Sharing 2.0.7\n"
+"Project-Id-Version: Ocean Social Sharing 2.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ocean-social-sharing\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-20T05:06:07+00:00\n"
+"POT-Creation-Date: 2024-09-20T01:33:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.9.0\n"
+"X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: ocean-social-sharing\n"
 
 #. Plugin Name of the plugin
+#: C:/laragon/www/owp.ws/wp-content/plugins/ocean-social-sharing/ocean-social-sharing.php
 msgid "Ocean Social Sharing"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: C:/laragon/www/owp.ws/wp-content/plugins/ocean-social-sharing/ocean-social-sharing.php
 msgid "https://oceanwp.org/extension/ocean-social-sharing/"
 msgstr ""
 
 #. Description of the plugin
+#: C:/laragon/www/owp.ws/wp-content/plugins/ocean-social-sharing/ocean-social-sharing.php
 msgid "A simple plugin to add social share buttons to your posts."
 msgstr ""
 
 #. Author of the plugin
+#: C:/laragon/www/owp.ws/wp-content/plugins/ocean-social-sharing/ocean-social-sharing.php
 msgid "OceanWP"
 msgstr ""
 
 #. Author URI of the plugin
+#: C:/laragon/www/owp.ws/wp-content/plugins/ocean-social-sharing/ocean-social-sharing.php
 msgid "https://oceanwp.org/"
 msgstr ""
 
-#: ocean-social-sharing.php:267
-#: ocean-social-sharing.php:753
+#: includes/options.php:18
+#: ocean-social-sharing.php:416
 msgid "Social Sharing"
 msgstr ""
 
-#: ocean-social-sharing.php:299
+#: includes/options.php:29
 msgid "Sharing Buttons"
 msgstr ""
 
-#: ocean-social-sharing.php:335
+#: includes/options.php:61
 msgid "Position"
 msgstr ""
 
-#: ocean-social-sharing.php:341
+#: includes/options.php:70
 msgid "Before the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:342
+#: includes/options.php:71
 msgid "After the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:343
-msgid "Before & After the Content"
+#: includes/options.php:72
+msgid "Before and After the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:344
-msgid "No Buttons in the Content"
+#: includes/options.php:73
+msgid "Disabled"
 msgstr ""
 
-#: ocean-social-sharing.php:367
-msgid "Add Social Name"
+#: includes/options.php:88
+msgid "Display Social Name"
 msgstr ""
 
-#: ocean-social-sharing.php:382
-msgid "Please Share This"
+#: includes/options.php:107
+msgid "X (ex Twitter) Username"
 msgstr ""
 
-#: ocean-social-sharing.php:393
+#: includes/options.php:127
 msgid "Sharing Heading"
 msgstr ""
 
-#: ocean-social-sharing.php:419
+#: includes/options.php:131
+msgid "Please Share This"
+msgstr ""
+
+#: includes/options.php:147
 msgid "Heading Position"
 msgstr ""
 
-#: ocean-social-sharing.php:425
+#: includes/options.php:158
+#: includes/options.php:159
 msgid "Side"
 msgstr ""
 
-#: ocean-social-sharing.php:426
+#: includes/options.php:163
+#: includes/options.php:164
 msgid "Top"
 msgstr ""
 
-#: ocean-social-sharing.php:448
-msgid "Twitter Username"
+#: includes/options.php:180
+msgid "Social Buttons Style"
 msgstr ""
 
-#: ocean-social-sharing.php:472
-msgid "Styling"
-msgstr ""
-
-#: ocean-social-sharing.php:496
-msgid "Style"
-msgstr ""
-
-#: ocean-social-sharing.php:502
+#: includes/options.php:189
 msgid "Minimal"
 msgstr ""
 
-#: ocean-social-sharing.php:503
+#: includes/options.php:190
 msgid "Colored"
 msgstr ""
 
-#: ocean-social-sharing.php:504
+#: includes/options.php:191
 msgid "Dark"
 msgstr ""
 
-#: ocean-social-sharing.php:526
-msgid "Border Radius"
+#: includes/options.php:206
+msgid "Buttons Border Radius"
 msgstr ""
 
-#: ocean-social-sharing.php:527
-msgid "Add a custom border radius. px - em - %."
+#: includes/options.php:221
+msgid "Desktop"
 msgstr ""
 
-#: ocean-social-sharing.php:552
-msgid "Minimal Style: Borders Color"
+#: includes/options.php:228
+msgid "Unit"
 msgstr ""
 
-#: ocean-social-sharing.php:576
-msgid "Minimal Style: Background Color"
+#: includes/options.php:252
+msgid "Minimal Style Borders"
 msgstr ""
 
-#: ocean-social-sharing.php:600
-msgid "Minimal Style: Color"
+#: includes/options.php:264
+#: includes/options.php:289
+#: includes/options.php:314
+msgid "Select Color"
+msgstr ""
+
+#: includes/options.php:277
+msgid "Minimal Style Background"
+msgstr ""
+
+#: includes/options.php:302
+msgid "Minimal Style Icon"
 msgstr ""
 
 #: template/social-share.php:69
