@@ -33,6 +33,7 @@ function oss_customizer_options() {
 				'priority'  => 10,
 				'default'   => ['twitter', 'facebook', 'pinterest', 'linkedin', 'viber', 'vk', 'reddit', 'tumblr', 'viadeo', 'whatsapp'],
 				'hideLabel' => false,
+				'sanitize_callback' => 'ocean_sanitize_sortable_control',
 				'choices'   => [
 					'twitter'     => 'X (ex Twitter)',
 					'facebook'    => 'Facebook',
