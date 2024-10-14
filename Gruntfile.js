@@ -32,6 +32,7 @@ module.exports = function ( grunt ) {
 				},
 				files: {
 					'assets/css/style.css': 'assets/css/style.scss',
+					'assets/css/pluginUpdateMessage.css': 'assets/css/pluginUpdateMessage.scss',
 				}
 			},
 			prod: {
@@ -42,6 +43,7 @@ module.exports = function ( grunt ) {
 				},
 				files: {
 					'assets/css/style.min.css': 'assets/css/style.scss',
+					'assets/css/pluginUpdateMessage.min.css': 'assets/css/pluginUpdateMessage.scss',
 				}
 			}
 		},
@@ -57,6 +59,8 @@ module.exports = function ( grunt ) {
 				files: {
 					'assets/css/style.css': 'assets/css/style.css',
 					'assets/css/style.min.css': 'assets/css/style.min.css',
+					'assets/css/pluginUpdateMessage.css': 'assets/css/pluginUpdateMessage.css',
+					'assets/css/pluginUpdateMessage.min.css': 'assets/css/pluginUpdateMessage.min.css',
 				}
 			}
 		},
@@ -69,6 +73,7 @@ module.exports = function ( grunt ) {
 			main: {
 				files: {
 					'assets/css/style.css': [ 'assets/css/style.css' ],
+					'assets/css/pluginUpdateMessage.css': [ 'assets/css/pluginUpdateMessage.css' ],
 				}
 			}
 		},
@@ -151,15 +156,15 @@ module.exports = function ( grunt ) {
 
 	// Dev task
 	grunt.registerTask( 'default', [
-		'sass:dev'
-	] );
-
-	// Production task
-	grunt.registerTask( 'build', [
+		'sass:dev',
 		'newer:uglify:prod',
 		'sass:prod',
 		'autoprefixer:main',
 		'csscomb:main',
+	] );
+
+	// Production task
+	grunt.registerTask( 'build', [
 		'copy'
 	] );
 

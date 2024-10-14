@@ -2,132 +2,155 @@
 # This file is distributed under the same license as the Ocean Social Sharing plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ocean Social Sharing 2.0.7\n"
+"Project-Id-Version: Ocean Social Sharing 2.0.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ocean-social-sharing\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-20T05:06:07+00:00\n"
+"POT-Creation-Date: 2024-10-11T06:42:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.9.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ocean-social-sharing\n"
 
 #. Plugin Name of the plugin
+#: ocean-social-sharing.php
 msgid "Ocean Social Sharing"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: ocean-social-sharing.php
 msgid "https://oceanwp.org/extension/ocean-social-sharing/"
 msgstr ""
 
 #. Description of the plugin
+#: ocean-social-sharing.php
 msgid "A simple plugin to add social share buttons to your posts."
 msgstr ""
 
 #. Author of the plugin
+#: ocean-social-sharing.php
 msgid "OceanWP"
 msgstr ""
 
 #. Author URI of the plugin
+#: ocean-social-sharing.php
 msgid "https://oceanwp.org/"
 msgstr ""
 
-#: ocean-social-sharing.php:267
-#: ocean-social-sharing.php:753
+#: includes/update-message.php:40
+msgid "Backup recommended before plugin update."
+msgstr ""
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: includes/update-message.php:46
+msgid "The latest update introduces significant improvements and changes to various plugin features.  For a smooth update process, it's crucial to %1$s backup your website beforehand  %2$s and test the update in a staging or test environment if available."
+msgstr ""
+
+#: includes/update-message.php:62
+msgid "What's new?"
+msgstr ""
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: includes/update-message.php:68
+msgid "Revamped Customizer for enhanced experience! This update delivers a completely redesigned Customizer with a focus on improved user interface (UI), user experience (UX), and performance. Enjoy a faster and more intuitive way to personalize your website with a wider range of options at your fingertips. Learn %1$s how to properly update your websites and transition to OceanWP 4 %4$s, view %2$s OceanWP 4 New Customizer details %4$s or check out the %3$s OceanWP 4 Customizer documentation %4$s."
+msgstr ""
+
+#: ocean-social-sharing.php:290
+#: ocean-social-sharing.php:776
 msgid "Social Sharing"
 msgstr ""
 
-#: ocean-social-sharing.php:299
+#: ocean-social-sharing.php:322
 msgid "Sharing Buttons"
 msgstr ""
 
-#: ocean-social-sharing.php:335
+#: ocean-social-sharing.php:358
 msgid "Position"
 msgstr ""
 
-#: ocean-social-sharing.php:341
+#: ocean-social-sharing.php:364
 msgid "Before the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:342
+#: ocean-social-sharing.php:365
 msgid "After the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:343
+#: ocean-social-sharing.php:366
 msgid "Before & After the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:344
+#: ocean-social-sharing.php:367
 msgid "No Buttons in the Content"
 msgstr ""
 
-#: ocean-social-sharing.php:367
+#: ocean-social-sharing.php:390
 msgid "Add Social Name"
 msgstr ""
 
-#: ocean-social-sharing.php:382
+#: ocean-social-sharing.php:405
 msgid "Please Share This"
 msgstr ""
 
-#: ocean-social-sharing.php:393
+#: ocean-social-sharing.php:416
 msgid "Sharing Heading"
 msgstr ""
 
-#: ocean-social-sharing.php:419
+#: ocean-social-sharing.php:442
 msgid "Heading Position"
 msgstr ""
 
-#: ocean-social-sharing.php:425
+#: ocean-social-sharing.php:448
 msgid "Side"
 msgstr ""
 
-#: ocean-social-sharing.php:426
+#: ocean-social-sharing.php:449
 msgid "Top"
 msgstr ""
 
-#: ocean-social-sharing.php:448
+#: ocean-social-sharing.php:471
 msgid "Twitter Username"
 msgstr ""
 
-#: ocean-social-sharing.php:472
+#: ocean-social-sharing.php:495
 msgid "Styling"
 msgstr ""
 
-#: ocean-social-sharing.php:496
+#: ocean-social-sharing.php:519
 msgid "Style"
 msgstr ""
 
-#: ocean-social-sharing.php:502
+#: ocean-social-sharing.php:525
 msgid "Minimal"
 msgstr ""
 
-#: ocean-social-sharing.php:503
+#: ocean-social-sharing.php:526
 msgid "Colored"
 msgstr ""
 
-#: ocean-social-sharing.php:504
+#: ocean-social-sharing.php:527
 msgid "Dark"
 msgstr ""
 
-#: ocean-social-sharing.php:526
+#: ocean-social-sharing.php:549
 msgid "Border Radius"
 msgstr ""
 
-#: ocean-social-sharing.php:527
+#: ocean-social-sharing.php:550
 msgid "Add a custom border radius. px - em - %."
 msgstr ""
 
-#: ocean-social-sharing.php:552
+#: ocean-social-sharing.php:575
 msgid "Minimal Style: Borders Color"
 msgstr ""
 
-#: ocean-social-sharing.php:576
+#: ocean-social-sharing.php:599
 msgid "Minimal Style: Background Color"
 msgstr ""
 
-#: ocean-social-sharing.php:600
+#: ocean-social-sharing.php:623
 msgid "Minimal Style: Color"
 msgstr ""
 
