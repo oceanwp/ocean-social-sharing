@@ -232,7 +232,6 @@ final class Ocean_Social_Sharing
 
 		if ('OceanWP' == $theme->name || 'oceanwp' == $theme->template ) {
 			include_once $this->plugin_path . '/includes/helpers.php';
-			//add_action('customize_register', array( $this, 'customizer_register' ));
 			add_action('customize_preview_init', array( $this, 'customize_preview_js' ));
 			add_filter( 'ocean_customize_options_data', array( $this, 'register_customize_options') );
 			add_action('wp_enqueue_scripts', array( $this, 'get_scripts' ), 999);
@@ -240,12 +239,6 @@ final class Ocean_Social_Sharing
 			add_action('ocean_social_share', array( $this, 'after_content' ));
 			add_filter('ocean_head_css', array( $this, 'head_css' ));
 			add_filter( 'oe_theme_panels', array( $this, 'oe_theme_panels' ) );
-
-			$theme_version = $theme['version'];
-
-			// if ( $theme_version <= '3.6.0' && ! class_exists( 'Ocean_Extra' ) ) {
-			// 	include_once $this->plugin_path . '/includes/update-message.php';
-			// }
 		}
 	}
 

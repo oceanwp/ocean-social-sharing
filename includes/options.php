@@ -326,7 +326,7 @@ function oss_customizer_options() {
 
 			'oss_sharing_need_help_link' => [
 				'type'      => 'ocean-content',
-				'isContent' => sprintf( esc_html__( '%1$s Need Help? %2$s', 'oceanwp' ), '<a href="https://docs.oceanwp.org/article/911-customizer-social-sharing/" target="_blank">', '</a>' ),
+				'isContent' => sprintf( esc_html__( '%1$s Need Help? %2$s', 'ocean-social-sharing' ), '<a href="https://docs.oceanwp.org/article/911-customizer-social-sharing/" target="_blank">', '</a>' ),
 				'class'     => 'need-help',
 				'section'   => 'ocean_social_sharing_settings',
 				'transport' => 'postMessage',
