@@ -64,6 +64,10 @@ This plugin will only function with the [OceanWP](https://oceanwp.org/) theme.
 
 == Changelog ==
 
+= 2.0.8 - OCT 11 2024 =
+- Added: Conditional checks for future updates.
+- Updated: Compatibility: WordPress version number.
+
 = 2.0.7 - MAY 20 2024 =
 - Updated: Compatibility: WordPress version number.
 

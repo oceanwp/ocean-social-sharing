@@ -1,7 +1,11 @@
 == Changelog ==
 
-= 2.0.8 - XXX XX 2024 =
+= 2.2.0 - XXX XX 2024 =
 - Fixed: Special Character decode of title for X, LinkedIn and Reddit.
+
+= 2.0.8 - OCT 11 2024 =
+- Added: Conditional checks for future updates.
+- Updated: Compatibility: WordPress version number.
 
 = 2.0.7 - MAY 20 2024 =
 - Updated: Compatibility: WordPress version number.
