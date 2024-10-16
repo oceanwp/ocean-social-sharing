@@ -3,11 +3,11 @@
  * Plugin Name:         Ocean Social Sharing
  * Plugin URI:          https://oceanwp.org/extension/ocean-social-sharing/
  * Description:         A simple plugin to add social share buttons to your posts.
- * Version:             2.0.8
+ * Version:             2.2.0
  * Author:              OceanWP
  * Author URI:          https://oceanwp.org/
  * Requires at least:   5.6
- * Tested up to:        6.6.2
+ * Tested up to:        6.6
  *
  * Text Domain: ocean-social-sharing
  * Domain Path: /languages
@@ -121,6 +121,8 @@ final class Ocean_Social_Sharing
 		$this->plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ), false );
 		$this->version     = $this->plugin_data['Version'];
 
+		define( 'OSS_VERSION', $this->version );
+
 		register_activation_hook(__FILE__, array( $this, 'install' ));
 
 		add_action('init', array( $this, 'oss_load_plugin_textdomain' ));
@@ -230,8 +232,8 @@ final class Ocean_Social_Sharing
 
 		if ('OceanWP' == $theme->name || 'oceanwp' == $theme->template ) {
 			include_once $this->plugin_path . '/includes/helpers.php';
-			add_action('customize_register', array( $this, 'customizer_register' ));
 			add_action('customize_preview_init', array( $this, 'customize_preview_js' ));
+			add_filter( 'ocean_customize_options_data', array( $this, 'register_customize_options') );
 			add_action('wp_enqueue_scripts', array( $this, 'get_scripts' ), 999);
 			add_action('ocean_before_single_post_content', array( $this, 'before_content' ));
 			add_action('ocean_social_share', array( $this, 'after_content' ));
@@ -264,370 +266,24 @@ final class Ocean_Social_Sharing
 	}
 
 	/**
-	 * Customizer Controls and settings
-	 *
-	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-	 * @since 1.0.0
+	 * Register customizer options
 	 */
-	public function customizer_register( $wp_customize )
-	{
+	public function register_customize_options($options) {
 
 		if ( OCEAN_EXTRA_ACTIVE
 			&& class_exists( 'Ocean_Extra_Theme_Panel' ) ) {
 
 			if ( empty( Ocean_Extra_Theme_Panel::get_setting( 'ocean_social_sharing_panel' ) ) ) {
-				return false;
+				return $options;
 			}
 
 		}
 
-		/**
-		 * Add a new section
-		 */
-		$wp_customize->add_section(
-			'oss_sharing_section',
-			array(
-			'title'    => esc_html__('Social Sharing', 'ocean-social-sharing'),
-			'priority' => 210,
-			)
-		);
+		include_once $this->plugin_path . '/includes/options.php';
 
-		/**
-		 * Sharing sites
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_sites',
-			array(
-			'default'           => array(
-			'twitter',
-			'facebook',
-			'pinterest',
-			'linkedin',
-			'viber',
-			'vk',
-			'reddit',
-			'tumblr',
-			'viadeo',
-			'whatsapp',
-			),
-			'sanitize_callback' => 'oceanwp_sanitize_multi_choices',
-			)
-		);
+		$options['ocean_social_sharing_settings'] = oss_customizer_options();
 
-		$wp_customize->add_control(
-			new OceanWP_Customizer_Sortable_Control(
-				$wp_customize,
-				'oss_social_share_sites',
-				array(
-					'label'    => esc_html__('Sharing Buttons', 'ocean-social-sharing'),
-					'section'  => 'oss_sharing_section',
-					'settings' => 'oss_social_share_sites',
-					'priority' => 10,
-					'choices'  => array(
-						'twitter'     => 'Twitter',
-						'facebook'    => 'Facebook',
-						'pinterest'   => 'Pinterest',
-						'linkedin'    => 'LinkedIn',
-						'viber'       => 'Viber',
-						'vk'          => 'VK',
-						'reddit'      => 'Reddit',
-						'tumblr'      => 'Tumblr',
-						'viadeo'      => 'Viadeo',
-						'whatsapp'    => 'WhatsApp',
-					),
-				)
-			)
-		);
-
-		/**
-		 * Position
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_position',
-			array(
-			'default'           => 'after',
-			'sanitize_callback' => 'oceanwp_sanitize_select',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'oss_social_share_position',
-				array(
-				'label'    => esc_html__('Position', 'ocean-social-sharing'),
-				'type'     => 'select',
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_social_share_position',
-				'priority' => 10,
-				'choices'  => array(
-				'before' => esc_html__('Before the Content', 'ocean-social-sharing'),
-				'after'  => esc_html__('After the Content', 'ocean-social-sharing'),
-				'both'   => esc_html__('Before & After the Content', 'ocean-social-sharing'),
-				'none'   => esc_html__('No Buttons in the Content', 'ocean-social-sharing'),
-					),
-				)
-			)
-		);
-
-		/**
-		 * Social Name
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_name',
-			array(
-			'transport'         => 'postMessage',
-			'default'           => false,
-			'sanitize_callback' => 'oceanwp_sanitize_checkbox',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'oss_social_share_name',
-				array(
-				'label'    => esc_html__('Add Social Name', 'ocean-social-sharing'),
-				'type'     => 'checkbox',
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_social_share_name',
-				'priority' => 10,
-				)
-			)
-		);
-
-		/**
-		 * Heading
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_heading',
-			array(
-			'default'           => esc_html__('Please Share This', 'ocean-social-sharing'),
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'oss_social_share_heading',
-				array(
-				'label'    => esc_html__('Sharing Heading', 'ocean-social-sharing'),
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_social_share_heading',
-				'type'     => 'text',
-				'priority' => 10,
-				)
-			)
-		);
-
-		/**
-		 * Heading Position
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_heading_position',
-			array(
-			'transport'         => 'postMessage',
-			'default'           => 'side',
-			'sanitize_callback' => 'oceanwp_sanitize_select',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'oss_social_share_heading_position',
-				array(
-				'label'    => esc_html__('Heading Position', 'ocean-social-sharing'),
-				'type'     => 'select',
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_social_share_heading_position',
-				'priority' => 10,
-				'choices'  => array(
-				'side' => esc_html__('Side', 'ocean-social-sharing'),
-				'top'  => esc_html__('Top', 'ocean-social-sharing'),
-					),
-				)
-			)
-		);
-
-		/**
-		 * Twitter Handle
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_twitter_handle',
-			array(
-			'default'           => '',
-			'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'oss_social_share_twitter_handle',
-				array(
-				'label'    => esc_html__('Twitter Username', 'ocean-social-sharing'),
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_social_share_twitter_handle',
-				'type'     => 'text',
-				'priority' => 10,
-				)
-			)
-		);
-
-		/**
-		 * Heading Styling
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_styling_heading',
-			array(
-			'sanitize_callback' => 'wp_kses',
-			)
-		);
-
-		$wp_customize->add_control(
-			new OceanWP_Customizer_Heading_Control(
-				$wp_customize,
-				'oss_social_share_styling_heading',
-				array(
-				'label'    => esc_html__('Styling', 'ocean-social-sharing'),
-				'section'  => 'oss_sharing_section',
-				'priority' => 10,
-				)
-			)
-		);
-
-		/**
-		 * Style
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_style',
-			array(
-			'transport'         => 'postMessage',
-			'default'           => 'minimal',
-			'sanitize_callback' => 'oceanwp_sanitize_select',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'oss_social_share_style',
-				array(
-				'label'    => esc_html__('Style', 'ocean-social-sharing'),
-				'type'     => 'select',
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_social_share_style',
-				'priority' => 10,
-				'choices'  => array(
-				'minimal' => esc_html__('Minimal', 'ocean-social-sharing'),
-				'colored' => esc_html__('Colored', 'ocean-social-sharing'),
-				'dark'    => esc_html__('Dark', 'ocean-social-sharing'),
-					),
-				)
-			)
-		);
-
-		/**
-		 * Border Radius
-		 */
-		$wp_customize->add_setting(
-			'oss_social_share_style_border_radius',
-			array(
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'oss_social_share_style_border_radius',
-				array(
-				'label'       => esc_html__('Border Radius', 'ocean-social-sharing'),
-				'description' => esc_html__('Add a custom border radius. px - em - %.', 'ocean-social-sharing'),
-				'type'        => 'text',
-				'section'     => 'oss_sharing_section',
-				'settings'    => 'oss_social_share_style_border_radius',
-				'priority'    => 10,
-				)
-			)
-		);
-
-		/**
-		 * Borders color
-		 */
-		$wp_customize->add_setting(
-			'oss_sharing_borders_color',
-			array(
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'oceanwp_sanitize_color',
-			)
-		);
-
-		$wp_customize->add_control(
-			new OceanWP_Customizer_Color_Control(
-				$wp_customize,
-				'oss_sharing_borders_color',
-				array(
-				'label'    => esc_html__('Minimal Style: Borders Color', 'ocean-social-sharing'),
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_sharing_borders_color',
-				'priority' => 10,
-				)
-			)
-		);
-
-		/**
-		 * Icons background color
-		 */
-		$wp_customize->add_setting(
-			'oss_sharing_icons_bg',
-			array(
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'oceanwp_sanitize_color',
-			)
-		);
-
-		$wp_customize->add_control(
-			new OceanWP_Customizer_Color_Control(
-				$wp_customize,
-				'oss_sharing_icons_bg',
-				array(
-				'label'    => esc_html__('Minimal Style: Background Color', 'ocean-social-sharing'),
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_sharing_icons_bg',
-				'priority' => 10,
-				)
-			)
-		);
-
-		/**
-		 * Icons color
-		 */
-		$wp_customize->add_setting(
-			'oss_sharing_icons_color',
-			array(
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'oceanwp_sanitize_color',
-			)
-		);
-
-		$wp_customize->add_control(
-			new OceanWP_Customizer_Color_Control(
-				$wp_customize,
-				'oss_sharing_icons_color',
-				array(
-				'label'    => esc_html__('Minimal Style: Color', 'ocean-social-sharing'),
-				'section'  => 'oss_sharing_section',
-				'settings' => 'oss_sharing_icons_color',
-				'priority' => 10,
-				)
-			)
-		);
-
+		return $options;
 	}
 
 	/**

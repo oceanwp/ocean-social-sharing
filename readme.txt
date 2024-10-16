@@ -2,9 +2,9 @@
 Contributors: oceanwp, apprimit, wpfleek
 Tags: social, social sharing, social share, share, oceanwp
 Requires at least: 5.6
-Tested up to: 6.6.2
+Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 2.0.8
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,14 @@ This plugin will only function with the [OceanWP](https://oceanwp.org/) theme.
 9. Settings.
 
 == Changelog ==
+
+= 2.2.0 - OCT 16 2024 =
+- NEW: Customizer: Library upgraded to default WordPress ReactJS.
+- NEW: Customizer: Customizer Controls.
+- NEW: Customizer: User Interface.
+- NEW: Customizer: Reorganized settings for improved user experience.
+- Fixed: Special Character decode of title for X, LinkedIn and Reddit.
+- Removed: Customizer: Legacy PHP Controls.
 
 = 2.0.8 - OCT 11 2024 =
 - Added: Conditional checks for future updates.

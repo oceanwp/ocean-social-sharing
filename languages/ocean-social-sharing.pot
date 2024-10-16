@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Ocean Social Sharing plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ocean Social Sharing 2.0.8\n"
+"Project-Id-Version: Ocean Social Sharing 2.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ocean-social-sharing\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-11T06:42:15+00:00\n"
+"POT-Creation-Date: 2024-10-16T09:42:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ocean-social-sharing\n"
@@ -31,12 +31,122 @@ msgstr ""
 
 #. Author of the plugin
 #: ocean-social-sharing.php
+#: includes/update-message.php:85
 msgid "OceanWP"
 msgstr ""
 
 #. Author URI of the plugin
 #: ocean-social-sharing.php
 msgid "https://oceanwp.org/"
+msgstr ""
+
+#: includes/options.php:18
+#: ocean-social-sharing.php:432
+msgid "Social Sharing"
+msgstr ""
+
+#: includes/options.php:29
+msgid "Sharing Buttons"
+msgstr ""
+
+#: includes/options.php:62
+msgid "Position"
+msgstr ""
+
+#: includes/options.php:71
+msgid "Before the Content"
+msgstr ""
+
+#: includes/options.php:72
+msgid "After the Content"
+msgstr ""
+
+#: includes/options.php:73
+msgid "Before and After the Content"
+msgstr ""
+
+#: includes/options.php:74
+msgid "Disabled"
+msgstr ""
+
+#: includes/options.php:89
+msgid "Display Social Name"
+msgstr ""
+
+#: includes/options.php:108
+msgid "X (ex Twitter) Username"
+msgstr ""
+
+#: includes/options.php:128
+msgid "Sharing Heading"
+msgstr ""
+
+#: includes/options.php:132
+msgid "Please Share This"
+msgstr ""
+
+#: includes/options.php:148
+msgid "Heading Position"
+msgstr ""
+
+#: includes/options.php:159
+#: includes/options.php:160
+msgid "Side"
+msgstr ""
+
+#: includes/options.php:164
+#: includes/options.php:165
+msgid "Top"
+msgstr ""
+
+#: includes/options.php:181
+msgid "Social Buttons Style"
+msgstr ""
+
+#: includes/options.php:190
+msgid "Minimal"
+msgstr ""
+
+#: includes/options.php:191
+msgid "Colored"
+msgstr ""
+
+#: includes/options.php:192
+msgid "Dark"
+msgstr ""
+
+#: includes/options.php:207
+msgid "Buttons Border Radius"
+msgstr ""
+
+#: includes/options.php:222
+msgid "Desktop"
+msgstr ""
+
+#: includes/options.php:229
+msgid "Unit"
+msgstr ""
+
+#: includes/options.php:253
+msgid "Minimal Style Borders"
+msgstr ""
+
+#: includes/options.php:265
+#: includes/options.php:290
+#: includes/options.php:315
+msgid "Select Color"
+msgstr ""
+
+#: includes/options.php:278
+msgid "Minimal Style Background"
+msgstr ""
+
+#: includes/options.php:303
+msgid "Minimal Style Icon"
+msgstr ""
+
+#: includes/options.php:329
+msgid "%1$s Need Help? %2$s"
 msgstr ""
 
 #: includes/update-message.php:40
@@ -57,101 +167,24 @@ msgstr ""
 msgid "Revamped Customizer for enhanced experience! This update delivers a completely redesigned Customizer with a focus on improved user interface (UI), user experience (UX), and performance. Enjoy a faster and more intuitive way to personalize your website with a wider range of options at your fingertips. Learn %1$s how to properly update your websites and transition to OceanWP 4 %4$s, view %2$s OceanWP 4 New Customizer details %4$s or check out the %3$s OceanWP 4 Customizer documentation %4$s."
 msgstr ""
 
-#: ocean-social-sharing.php:290
-#: ocean-social-sharing.php:776
-msgid "Social Sharing"
+#: includes/update-message.php:81
+msgid "Items"
 msgstr ""
 
-#: ocean-social-sharing.php:322
-msgid "Sharing Buttons"
+#: includes/update-message.php:82
+msgid "Required Version"
 msgstr ""
 
-#: ocean-social-sharing.php:358
-msgid "Position"
+#: includes/update-message.php:86
+msgid "4.0.0"
 msgstr ""
 
-#: ocean-social-sharing.php:364
-msgid "Before the Content"
+#: includes/update-message.php:89
+msgid "Ocean Extra"
 msgstr ""
 
-#: ocean-social-sharing.php:365
-msgid "After the Content"
-msgstr ""
-
-#: ocean-social-sharing.php:366
-msgid "Before & After the Content"
-msgstr ""
-
-#: ocean-social-sharing.php:367
-msgid "No Buttons in the Content"
-msgstr ""
-
-#: ocean-social-sharing.php:390
-msgid "Add Social Name"
-msgstr ""
-
-#: ocean-social-sharing.php:405
-msgid "Please Share This"
-msgstr ""
-
-#: ocean-social-sharing.php:416
-msgid "Sharing Heading"
-msgstr ""
-
-#: ocean-social-sharing.php:442
-msgid "Heading Position"
-msgstr ""
-
-#: ocean-social-sharing.php:448
-msgid "Side"
-msgstr ""
-
-#: ocean-social-sharing.php:449
-msgid "Top"
-msgstr ""
-
-#: ocean-social-sharing.php:471
-msgid "Twitter Username"
-msgstr ""
-
-#: ocean-social-sharing.php:495
-msgid "Styling"
-msgstr ""
-
-#: ocean-social-sharing.php:519
-msgid "Style"
-msgstr ""
-
-#: ocean-social-sharing.php:525
-msgid "Minimal"
-msgstr ""
-
-#: ocean-social-sharing.php:526
-msgid "Colored"
-msgstr ""
-
-#: ocean-social-sharing.php:527
-msgid "Dark"
-msgstr ""
-
-#: ocean-social-sharing.php:549
-msgid "Border Radius"
-msgstr ""
-
-#: ocean-social-sharing.php:550
-msgid "Add a custom border radius. px - em - %."
-msgstr ""
-
-#: ocean-social-sharing.php:575
-msgid "Minimal Style: Borders Color"
-msgstr ""
-
-#: ocean-social-sharing.php:599
-msgid "Minimal Style: Background Color"
-msgstr ""
-
-#: ocean-social-sharing.php:623
-msgid "Minimal Style: Color"
+#: includes/update-message.php:90
+msgid "2.4.0"
 msgstr ""
 
 #: template/social-share.php:69
