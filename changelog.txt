@@ -1,7 +1,12 @@
 == Changelog ==
 
-= 2.2.0 - XXX XX 2024 =
+= 2.2.0 - OCT 16 2024 =
+- NEW: Customizer: Library upgraded to default WordPress ReactJS.
+- NEW: Customizer: Customizer Controls.
+- NEW: Customizer: User Interface.
+- NEW: Customizer: Reorganized settings for improved user experience.
 - Fixed: Special Character decode of title for X, LinkedIn and Reddit.
+- Removed: Customizer: Legacy PHP Controls.
 
 = 2.0.8 - OCT 11 2024 =
 - Added: Conditional checks for future updates.
