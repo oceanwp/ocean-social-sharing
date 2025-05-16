@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 2.2.1 - XXX XX 2025 =
+- FIXED: WhatsApp Share API: Change API for WhatsApp sharing (12192).
+
 = 2.2.0 - OCT 16 2024 =
 - NEW: Customizer: Library upgraded to default WordPress ReactJS.
 - NEW: Customizer: Customizer Controls.
