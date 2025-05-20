@@ -28,7 +28,17 @@
 		],
         "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
         "lint:summary": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
-        "make-pot": "wp i18n make-pot . languages/ocean-social-sharing.pot --exclude=build"
+        "make-pot": "wp i18n make-pot . languages/ocean-social-sharing.pot --exclude=build",
+        "update-mo": [
+            "msgmerge --backup=off --update languages/ocean-social-sharing-es_ES.po languages/ocean-social-sharing.pot",
+            "msgmerge --backup=off --update languages/ocean-social-sharing-pl_PL.po languages/ocean-social-sharing.pot",
+            "msgmerge --backup=off --update languages/ocean-social-sharing-et.po languages/ocean-social-sharing.pot",
+            "msgmerge --backup=off --update languages/ocean-social-sharing-nl_NL.po languages/ocean-social-sharing.pot",
+            "msgfmt languages/ocean-social-sharing-es_ES.po -o languages/ocean-social-sharing-es_ES.mo",
+            "msgfmt languages/ocean-social-sharing-pl_PL.po -o languages/ocean-social-sharing-pl_PL.mo",
+            "msgfmt languages/ocean-social-sharing-et.po -o languages/ocean-social-sharing-et.mo",
+            "msgfmt languages/ocean-social-sharing-nl_NL.po -o languages/ocean-social-sharing-nl_NL.mo"
+        ]
     },
 
     "config": {
