@@ -341,7 +341,7 @@ $classes = implode( ' ', $classes ); ?>
 			if ( 'whatsapp' == $site ) { ?>
 
 				<li class="whatsapp">
-					<a href="whatsapp://send?text=<?php echo rawurlencode( esc_url( $url ) ); ?>" aria-label="<?php esc_html_e( 'Share on WhatsApp', 'ocean-social-sharing' ); ?>" onclick="oss_onClick( this.href );return false;" data-action="share/whatsapp/share">
+					<a href="https://wa.me/?text=<?php echo rawurlencode( esc_url( $url ) ); ?>" aria-label="<?php esc_html_e( 'Share on WhatsApp', 'ocean-social-sharing' ); ?>" onclick="oss_onClick( this.href );return false;" data-action="share/whatsapp/share">
 						<span class="screen-reader-text"><?php echo esc_attr__( 'Opens in a new window', 'ocean-social-sharing' ); ?></span>
 						<span class="oss-icon-wrap">
 							<svg class="oss-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
