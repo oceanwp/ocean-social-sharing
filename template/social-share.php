@@ -92,12 +92,21 @@ $classes = implode( ' ', $classes ); ?>
 					}
 				}
 
+				$share_text = rawurlencode( wp_strip_all_tags( $title ) );
+
 				// Get twitter handle
 				$handle = get_theme_mod( 'oss_social_share_twitter_handle' );
-				$handle = str_replace( '@' , '' , trim( $handle ) ); ?>
+				$handle = str_replace( '@' , '' , trim( $handle ) );
+
+				$share_url = 'https://twitter.com/share?text=' . $share_text . '&url=' . rawurlencode( esc_url( $url ) );
+				if ( $handle ) {
+					$share_url .= '&via=' . rawurlencode( $handle );
+				}
+
+				?>
 
 				<li class="twitter">
-					<a href="https://twitter.com/share?text=<?php echo html_entity_decode( wp_strip_all_tags( $title ) ); ?>&amp;url=<?php echo rawurlencode( esc_url( $url ) ); ?><?php if ( $handle ) echo '&amp;via='. esc_attr( $handle ); ?>" aria-label="<?php esc_attr_e( 'Share on X', 'ocean-social-sharing' ); ?>" onclick="oss_onClick( this.href );return false;">
+					<a href="<?php echo esc_url( $share_url ); ?>" aria-label="<?php esc_attr_e( 'Share on X', 'ocean-social-sharing' ); ?>" onclick="oss_onClick( this.href );return false;">
 						<span class="screen-reader-text"><?php echo esc_attr__( 'Opens in a new window', 'ocean-social-sharing' ); ?></span>
 						<span class="oss-icon-wrap">
 							<svg class="oss-icon" role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -172,8 +181,20 @@ $classes = implode( ' ', $classes ); ?>
 			// LinkedIn
 			if ( 'linkedin' == $site ) { ?>
 
+				<?php
+				// Sanitize title and summary
+				$linkedin_url = add_query_arg( [
+					'mini'    => 'true',
+					'url'     => esc_url( $url ),
+					'title'   => wp_strip_all_tags( $title ),
+					'summary' => wp_trim_words( strip_shortcodes( get_the_content( $post_id ) ), 40 ),
+					'source'  => home_url( '/' ),
+				], 'https://www.linkedin.com/shareArticle' );
+				?>
+
+
 				<li class="linkedin">
-					<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo rawurlencode( esc_url( $url ) ); ?>&amp;title=<?php echo html_entity_decode(wp_strip_all_tags( $title )); ?>&amp;summary=<?php echo urlencode( wp_trim_words( strip_shortcodes( get_the_content( $post_id ) ), 40 ) ); ?>&amp;source=<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php esc_attr_e( 'Share on LinkedIn', 'ocean-social-sharing' ); ?>" onclick="oss_onClick( this.href );return false;">
+					<a href="<?php echo esc_url( $linkedin_url ); ?>" aria-label="<?php esc_attr_e( 'Share on LinkedIn', 'ocean-social-sharing' ); ?>" onclick="oss_onClick( this.href );return false;">
 					<span class="screen-reader-text"><?php echo esc_attr__( 'Opens in a new window', 'ocean-social-sharing' ); ?></span>
 						<span class="oss-icon-wrap">
 							<svg class="oss-icon" role="img" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
