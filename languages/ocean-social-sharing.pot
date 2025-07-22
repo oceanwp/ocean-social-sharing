@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-17T07:48:13+00:00\n"
+"POT-Creation-Date: 2025-07-22T07:34:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ocean-social-sharing\n"
@@ -205,13 +205,13 @@ msgstr ""
 #: template/social-share.php:110
 #: template/social-share.php:133
 #: template/social-share.php:158
-#: template/social-share.php:198
-#: template/social-share.php:223
-#: template/social-share.php:255
-#: template/social-share.php:284
-#: template/social-share.php:313
-#: template/social-share.php:338
-#: template/social-share.php:366
+#: template/social-share.php:197
+#: template/social-share.php:222
+#: template/social-share.php:254
+#: template/social-share.php:289
+#: template/social-share.php:318
+#: template/social-share.php:343
+#: template/social-share.php:371
 msgid "Opens in a new window"
 msgstr ""
 
@@ -235,58 +235,58 @@ msgstr ""
 msgid "Pinterest"
 msgstr ""
 
-#: template/social-share.php:197
+#: template/social-share.php:196
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: template/social-share.php:210
+#: template/social-share.php:209
 msgid "LinkedIn"
 msgstr ""
 
-#: template/social-share.php:222
+#: template/social-share.php:221
 msgid "Share on Viber"
 msgstr ""
 
-#: template/social-share.php:242
+#: template/social-share.php:241
 msgid "Viber"
 msgstr ""
 
-#: template/social-share.php:254
+#: template/social-share.php:253
 msgid "Share on VK"
 msgstr ""
 
-#: template/social-share.php:271
+#: template/social-share.php:270
 msgid "VK"
 msgstr ""
 
-#: template/social-share.php:283
+#: template/social-share.php:288
 msgid "Share on Reddit"
 msgstr ""
 
-#: template/social-share.php:300
+#: template/social-share.php:305
 msgid "Reddit"
 msgstr ""
 
-#: template/social-share.php:312
+#: template/social-share.php:317
 msgid "Share on Tumblr"
 msgstr ""
 
-#: template/social-share.php:325
+#: template/social-share.php:330
 msgid "Tumblr"
 msgstr ""
 
-#: template/social-share.php:337
+#: template/social-share.php:342
 msgid "Share on Viadeo"
 msgstr ""
 
-#: template/social-share.php:353
+#: template/social-share.php:358
 msgid "Viadeo"
 msgstr ""
 
-#: template/social-share.php:365
+#: template/social-share.php:370
 msgid "Share on WhatsApp"
 msgstr ""
 
-#: template/social-share.php:382
+#: template/social-share.php:387
 msgid "WhatsApp"
 msgstr ""

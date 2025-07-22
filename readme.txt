@@ -64,9 +64,8 @@ This plugin will only function with the [OceanWP](https://oceanwp.org/) theme.
 
 == Changelog ==
 
-= 2.2.2 - XXX XX 2025 =
-- Updated: Twitter Share API: URL updated.
-- Updated: LinkedIn Share API: URL updated.
+= 2.2.2 - JUL 22 2025 =
+- Fixed: Potential vulnerability patched: Report by Wordfence from JUL 15th 2025. Shoutout and a thanks to the Wordfence team for patch test and confirmation.
 
 = 2.2.1 - MAY 19 2025 =
 - Updated: WhatsApp Share API: URL updated.
