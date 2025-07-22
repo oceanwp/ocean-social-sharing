@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Ocean Social Sharing plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ocean Social Sharing 2.2.1\n"
+"Project-Id-Version: Ocean Social Sharing 2.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ocean-social-sharing\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-05-19T05:22:40+00:00\n"
+"POT-Creation-Date: 2025-07-22T07:34:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ocean-social-sharing\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #. Author of the plugin
 #: ocean-social-sharing.php
-#: includes/update-message.php:85
+#: includes/update-message.php:84
 msgid "OceanWP"
 msgstr ""
 
@@ -150,43 +150,43 @@ msgstr ""
 msgid "%1$s Need Help? %2$s"
 msgstr ""
 
-#: includes/update-message.php:40
+#: includes/update-message.php:39
 msgid "Backup recommended before plugin update."
 msgstr ""
 
 #. translators: %1$s Link open tag, %2$s: Link close tag.
-#: includes/update-message.php:46
+#: includes/update-message.php:45
 #, php-format
 msgid "The latest update introduces significant improvements and changes to various plugin features.  For a smooth update process, it's crucial to %1$s backup your website beforehand  %2$s and test the update in a staging or test environment if available."
 msgstr ""
 
-#: includes/update-message.php:62
+#: includes/update-message.php:61
 msgid "What's new?"
 msgstr ""
 
 #. translators: %1$s Link open tag, %2$s: Link close tag.
-#: includes/update-message.php:68
+#: includes/update-message.php:67
 #, php-format
 msgid "Revamped Customizer for enhanced experience! This update delivers a completely redesigned Customizer with a focus on improved user interface (UI), user experience (UX), and performance. Enjoy a faster and more intuitive way to personalize your website with a wider range of options at your fingertips. Learn %1$s how to properly update your websites and transition to OceanWP 4 %4$s, view %2$s OceanWP 4 New Customizer details %4$s or check out the %3$s OceanWP 4 Customizer documentation %4$s."
 msgstr ""
 
-#: includes/update-message.php:81
+#: includes/update-message.php:80
 msgid "Items"
 msgstr ""
 
-#: includes/update-message.php:82
+#: includes/update-message.php:81
 msgid "Required Version"
 msgstr ""
 
-#: includes/update-message.php:86
+#: includes/update-message.php:85
 msgid "4.0.0"
 msgstr ""
 
-#: includes/update-message.php:89
+#: includes/update-message.php:88
 msgid "Ocean Extra"
 msgstr ""
 
-#: includes/update-message.php:90
+#: includes/update-message.php:89
 msgid "2.4.0"
 msgstr ""
 
@@ -198,95 +198,95 @@ msgstr ""
 msgid "Available sharing options"
 msgstr ""
 
-#: template/social-share.php:100
+#: template/social-share.php:109
 msgid "Share on X"
 msgstr ""
 
-#: template/social-share.php:101
-#: template/social-share.php:124
-#: template/social-share.php:149
-#: template/social-share.php:177
-#: template/social-share.php:202
-#: template/social-share.php:234
-#: template/social-share.php:263
-#: template/social-share.php:292
-#: template/social-share.php:317
-#: template/social-share.php:345
+#: template/social-share.php:110
+#: template/social-share.php:133
+#: template/social-share.php:158
+#: template/social-share.php:197
+#: template/social-share.php:222
+#: template/social-share.php:254
+#: template/social-share.php:289
+#: template/social-share.php:318
+#: template/social-share.php:343
+#: template/social-share.php:371
 msgid "Opens in a new window"
 msgstr ""
 
-#: template/social-share.php:111
+#: template/social-share.php:120
 msgid "X"
 msgstr ""
 
-#: template/social-share.php:123
+#: template/social-share.php:132
 msgid "Share on Facebook"
 msgstr ""
 
-#: template/social-share.php:136
+#: template/social-share.php:145
 msgid "Facebook"
 msgstr ""
 
-#: template/social-share.php:148
+#: template/social-share.php:157
 msgid "Share on Pinterest"
 msgstr ""
 
-#: template/social-share.php:164
+#: template/social-share.php:173
 msgid "Pinterest"
 msgstr ""
 
-#: template/social-share.php:176
+#: template/social-share.php:196
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: template/social-share.php:189
+#: template/social-share.php:209
 msgid "LinkedIn"
 msgstr ""
 
-#: template/social-share.php:201
+#: template/social-share.php:221
 msgid "Share on Viber"
 msgstr ""
 
-#: template/social-share.php:221
+#: template/social-share.php:241
 msgid "Viber"
 msgstr ""
 
-#: template/social-share.php:233
+#: template/social-share.php:253
 msgid "Share on VK"
 msgstr ""
 
-#: template/social-share.php:250
+#: template/social-share.php:270
 msgid "VK"
 msgstr ""
 
-#: template/social-share.php:262
+#: template/social-share.php:288
 msgid "Share on Reddit"
 msgstr ""
 
-#: template/social-share.php:279
+#: template/social-share.php:305
 msgid "Reddit"
 msgstr ""
 
-#: template/social-share.php:291
+#: template/social-share.php:317
 msgid "Share on Tumblr"
 msgstr ""
 
-#: template/social-share.php:304
+#: template/social-share.php:330
 msgid "Tumblr"
 msgstr ""
 
-#: template/social-share.php:316
+#: template/social-share.php:342
 msgid "Share on Viadeo"
 msgstr ""
 
-#: template/social-share.php:332
+#: template/social-share.php:358
 msgid "Viadeo"
 msgstr ""
 
-#: template/social-share.php:344
+#: template/social-share.php:370
 msgid "Share on WhatsApp"
 msgstr ""
 
-#: template/social-share.php:361
+#: template/social-share.php:387
 msgid "WhatsApp"
 msgstr ""
