@@ -2,9 +2,9 @@
 Contributors: oceanwp, apprimit, wpfleek
 Tags: social, social sharing, social share, share, oceanwp
 Requires at least: 5.6
-Tested up to: 6.8
+Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ This plugin will only function with the [OceanWP](https://oceanwp.org/) theme.
 9. Settings.
 
 == Changelog ==
+
+= 2.2.3 - MAY 20 2026 =
+- Updated: Compatibility: WordPress version number.
 
 = 2.2.2 - JUL 22 2025 =
 - Fixed: Potential vulnerability patched: Report by Wordfence from JUL 15th 2025. Shoutout and a thanks to the Wordfence team for patch test and confirmation.
